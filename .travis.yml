@@ -1,10 +1,17 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  skip_cleanup: true
+  app: andrius-build-and-deploy-2019
+  provider: heroku
+  api_key:
+    secure: lxBERT/WbAtdEQb3RpwrxTAybwzKqH3gF7jOIx5oOWf568fOCqm0i8oFuaeyNd0vC7OJjRdReaajdvYkCJegu2DkZFM5AikLkEAYZis00hRQLrTgPLULHhgclQCORZWmObdRU+wORnyDYnOJhKB2yCtCwby+Tv2XRG1Bq0unn107wR4A93iH48lpM3wXsdfGEjTyaELfQpdkc1m50ZDTiJ5Ox/2nwe6OVHTnIxDpuy/UdfUonn5G1S9dPYiBCxkXFFtHQApLF6e5wr2U/HLr1sxU9mvVbyjont5ZiPkyfnt4NITsUcjN1WEQzmAJgYy1dUw3DX3MGpLW0AKu6nYouE0r+TnPVSRv3kuKQ7peLLWEtcGjP4QO/n5bDpFCXlTlkIvNSlaZkz4PPlrJeAX4RGdkwqsLl2QW2s2cxeo5iG8NaZxVggeIS8qiwuwdoA0GjgNigi7edrYRA+DRhpOor5Xp+0k5Ga/gYFZBKlE8PwVNt2TR9h49S/yhd2PucUAHGB/AGEQTBmCBPxGObPU1Iqvo9n3uSxuC6WJYUrm3fNZu8jBATuumnISEpHcvPqMgEAScnaVlJ7QIk1anTr3jPNUd2ZRkGnKMBHsNVQJm9iQm16k81zA89R2NmMlLVU2H3fEkTxP3CarAxwJkY1qfCpt+131JnLsuRhKVuLlREf8=
+
